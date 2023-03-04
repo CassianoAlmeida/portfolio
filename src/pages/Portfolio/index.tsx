@@ -1,4 +1,5 @@
 import Project from './Project';
+import styles from './Portfolio.module.scss';
 
 interface PortfolioProps {
     projects: Array<{
@@ -6,6 +7,7 @@ interface PortfolioProps {
       name: string;
       link: string;
       image: string;
+      github: string;
       details: {
         description: string;
         techStack: string[];
@@ -16,10 +18,13 @@ interface PortfolioProps {
   
 export default function Portfolio({ projects }: PortfolioProps) {
   return (
-    <div className="portfolio">
-      {projects.map((project) => (
-        <Project project={project} key={project.id} />
-      ))}
+    <div className={styles.portfolio}>
+      <div className={styles.portfolio__title}>Featured projects</div>
+      <div className={styles.portfolio__projects}>
+        {projects.map((project) => (
+          <Project project={project} key={project.id} />
+        ))}
+      </div>
     </div>
   );
 }

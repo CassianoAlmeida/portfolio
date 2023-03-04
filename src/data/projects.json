@@ -2,7 +2,8 @@
     "id": 1,
     "name": "My fist app - Mug shop",    
     "link": "https://art-pieces.000webhostapp.com/",
-    "image": "https://www.project2.com/image.jpg",    
+    "github": "https://github.com/CassianoAlmeida/sa-arts",
+    "image": "/projects-images/sa-arts.png",    
     "details": {      
         "description": "Simple web page that represents a marketplace. The products shown are static. The main feature is the good looking responsive mode.",      
         "techStack": ["HTML", "SASS", "Javascript", "Bootstrap"],
@@ -13,7 +14,8 @@
     "id": 2,
     "name": "Alura Geek",
     "link": "https://alura-geek3.000webhostapp.com/",
-    "image": "https://www.project2.com/image.jpg",
+    "github": "https://github.com/CassianoAlmeida/AluraChallenge-FrontEnd",
+    "image": "/projects-images/alura-geek.png",
     "details": {
       "description": "REST API Marketplace, with a simple interface for the seller to add products. Access for fake login. email = 'fakelogin@alurageek.com.br'; senha = 'AluraGeek!@#'",
       "techStack": ["HTML", "SASS", "Javascript", "Node.js", "MongoDB", "AWS S3"],
@@ -23,10 +25,11 @@
   {
     "id": 3,
     "name": "My First React App - To do list",
-    "link": "https://first-react-app-to-do-list.vercel.app/",
-    "image": "https://www.project2.com/image.jpg",
+    "link": "http://first-react-app-to-do-list.vercel.app/",
+    "github": "https://github.com/CassianoAlmeida/first-react-app-to-do-list",
+    "image": "/projects-images/to-do-list.png",
     "details": {
-      "description": "A very simple and clean to-do-list",
+      "description": "A very simple and clean clean designed to-do-list, where you can crete a new task, cross it when it is done or delete.",
       "techStack": ["React", "SASS"],
       "status": ["Fully working"]
     }

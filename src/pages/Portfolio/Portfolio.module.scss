@@ -1,0 +1,31 @@
+@import "styles/variables";
+@import "styles/breakpoints";
+
+.portfolio {
+
+    @include for-desktop-only {
+        width: 100%;
+    }
+
+    &__title {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 60px;
+        font-size: 35px;
+        font-weight: bold;
+
+        @include for-desktop-only {
+            height: 150px;
+        }
+    }
+
+    &__projects {
+
+        @include for-desktop-only {
+            display: flex;
+        }
+        
+    }
+}
