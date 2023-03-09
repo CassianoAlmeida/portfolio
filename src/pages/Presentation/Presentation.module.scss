@@ -1,0 +1,58 @@
+.presentation {
+    margin: 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    &__picture {
+        width: 85%;
+        height: 350px;
+        object-fit: cover;
+        object-position: 0 -170px;
+        margin: 0 auto;
+    }
+
+    &__name {
+        margin: 20px 0;
+        font-weight: bold;
+        font-size: 20px;
+        text-align: center;
+    }
+
+    &__story {
+        margin: 0 10px 10px 10px;
+        text-align: justify;
+        text-justify: inter-word;
+    }
+
+    &__education {
+        margin: 0 10px 10px 10px;
+
+        &__title {
+            font-weight: bold;
+            font-size: 20px;
+        }
+
+        &__list {
+            margin: 10px 0;
+
+            &__item {
+                margin: 5px 0;
+
+                &__link {
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+
+    &__topics {
+        &__title {
+
+        }
+
+        &__list {
+
+        }
+    }
+}
