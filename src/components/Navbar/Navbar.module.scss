@@ -1,11 +1,16 @@
 @import "styles/variables";
 @import "styles/breakpoints";
 
+header {
+  background-color: $darker-background;
+}
+
 .navbar {
+    width: 75%;
+    margin: 0 auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: $darker-background;
     color: #fff;
     height: 80px;
     padding: 0 20px;
@@ -90,8 +95,9 @@
       @include for-desktop-only {
         display: flex;
         width: 60%;
+        height: 100%;
         justify-content: space-around;
-        top: 25px;
+        top: 0;
         z-index: 1;
         font-size: 20px;
       }
@@ -99,13 +105,14 @@
       @include for-tablet-only {
         display: flex;
         width: 60%;
+        height: 100%;
         justify-content: space-around;
-        top: 25px;
+        top: 0;
         z-index: 1;
         font-size: 20px;
       }
   
-      @media (min-width: 768px) {
+      @media (min-width: 600px) {
         flex-direction: row;
         align-items: center;
       }
@@ -113,12 +120,25 @@
   
     &__topic {
       padding: 10px 20px;
+      height: 100%;
       cursor: pointer;
       width: 100%;
       text-align: right;
   
-      @media (min-width: 768px) {
+      @include for-tablet-only {
+        display: flex;
         padding: 0 20px;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+      }
+
+      @include for-desktop-only {
+        display: flex;
+        padding: 0 20px;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
       }
   
       &:hover {
@@ -126,8 +146,18 @@
       }
 
       &__link {
+        width: 100%;
         text-decoration: none;
+        font-size: 16px;
         color: white;
+
+        @include for-desktop-only {
+          font-size: 18px;
+        }
+
+        &:hover {
+          color: $dark-hot-theme;
+        }
       }
     }
   }

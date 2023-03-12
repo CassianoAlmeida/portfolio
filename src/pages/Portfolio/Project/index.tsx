@@ -40,7 +40,7 @@ export default function Project({ project }: ProjectProps) {
               className={styles.projects__project__body__links__link}
               href={github}
             >
-              <img className={styles.projects__project__body__links__link__img} src={githubLogo} alt="" />
+              <img className={styles.projects__project__body__links__link__img} src={githubLogo} alt="github" />
               <p className={styles.projects__project__body__links__link__text}>See my repo!</p>
             </a>
             <a 
