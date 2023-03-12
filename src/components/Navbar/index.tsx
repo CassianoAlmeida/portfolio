@@ -22,7 +22,7 @@ export default function Navbar() {
 
   return (
     <nav className={styles.navbar}>
-      <div className={styles.navbar__logo}>Portfolio</div>
+      <div className={styles.navbar__logo}>CA</div>
       <button
         className={styles.navbar__hamburger + (isMenuOpen ? ' ' + styles.open : '')}
         onClick={handleMenuClick}

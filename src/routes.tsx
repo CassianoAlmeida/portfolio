@@ -9,7 +9,7 @@ import ContactMe from 'pages/ContactMe.jsx';
 export default function AppRouter() {
 
   return (
-    <main>
+    <div>
       <Router>
         <Navbar />
         <Routes>
@@ -19,6 +19,6 @@ export default function AppRouter() {
         </Routes>
         <Footer />
       </Router>
-    </main>
+    </div>
   );
 }
