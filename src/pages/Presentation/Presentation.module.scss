@@ -1,32 +1,74 @@
+@import "styles/variables";
+@import "styles/breakpoints";
+
 main {
     min-height: calc(100vh - 210px);
 }
 
 .presentation {
-    margin: 5%;
+    margin: 40px auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    width: 75%;
 
-    &__picture {
-        width: 85%;
-        height: 350px;
-        object-fit: cover;
-        object-position: 0 -170px;
-        margin: 0 auto;
+    &__introduction {
+        width: 100%;
     }
 
-    &__name {
-        margin: 20px 0;
+    &__title {
+        margin: 15px 0;
+        font-weight: bold;
+        font-size: 30px;
+        text-align: left;
+        color: white;
+        font-family: $montserrat-style;
+    }
+
+    &__titleColor {
+        color: $dark-hot-theme;
+    }
+
+    &__topics {
+        font-family: $montserrat-style;
         font-weight: bold;
         font-size: 20px;
-        text-align: center;
+        color: white;
+        margin-bottom: 20px;
+    }
+
+    &__detail {
+
+        &__square {
+            display: block;
+            width: 10px;
+            height: 10px;
+            background-color: white;
+            rotate: 45deg;
+            transform: translate(3px, 3px);
+        }
+
+        &__verticalLine {
+            display: block;
+            margin: 0 auto;
+            width: 2px;
+            height: 100%;
+            background-color: white;
+        }
     }
 
     &__story {
-        margin: 0 10px 10px 10px;
-        text-align: justify;
-        text-justify: inter-word;
+        display: flex;
+        margin: 40px 0;
+
+        &__body {
+            margin-left: 15px;
+
+            &__text {
+                text-align: left;
+                color: white;
+            }
+        }
     }
 
     &__education {
@@ -47,16 +89,6 @@ main {
                     text-decoration: none;
                 }
             }
-        }
-    }
-
-    &__topics {
-        &__title {
-
-        }
-
-        &__list {
-
         }
     }
 }

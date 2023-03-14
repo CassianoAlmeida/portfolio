@@ -35,7 +35,7 @@ export default function Navbar() {
         <ul className={styles.navbar__topics + (isMenuOpen ? ' ' + styles.open : '')}>
           {topics.map((topic, index) => (
             <li key={index} className={styles.navbar__topic}>
-              <Link className={styles.navbar__topic__link} to={topic.to}>
+              <Link className={styles.navbar__topic__link} to={topic.to} onClick={handleMenuClick}>
                 {topic.label}
               </Link>
             </li>
