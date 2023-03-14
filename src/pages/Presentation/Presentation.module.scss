@@ -72,21 +72,39 @@ main {
     }
 
     &__education {
-        margin: 0 10px 10px 10px;
+        display: flex;
+        margin: 40px 0;
+    }
 
-        &__title {
-            font-weight: bold;
-            font-size: 20px;
-        }
+    &__languages {
+        display: flex;
+        margin: 40px 0;
+    }
 
-        &__list {
-            margin: 10px 0;
+    &__list {
 
-            &__item {
-                margin: 5px 0;
+        &__body {
+            margin-left: 15px;
+
+            &__topic {
+                display: flex;
+                align-items: center;
+                margin-bottom: 25px;
+
+                &__mark {
+                    color: white;
+                    margin-left: -10px;
+                }
+
+                &__text {
+                    text-align: left;
+                    color: white;
+                    margin-left: 8px;
+                }
 
                 &__link {
                     text-decoration: none;
+                    color: $dark-hot-theme;
                 }
             }
         }

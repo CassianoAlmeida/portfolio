@@ -27,19 +27,57 @@ export default function Presentation() {
           </div>
         </section>
 
+        <section className={styles.presentation__education}>
+          <div className={styles.presentation__detail}>
+            <span className={styles.presentation__detail__square}></span>
+            <span className={styles.presentation__detail__verticalLine}></span>
+          </div>
+          <div className={styles.presentation__list__body}>
+            <h2 className={styles.presentation__topics}>{'Education'}</h2>
+            <div className={styles.presentation__list__body__topic}>
+              <span className={styles.presentation__list__body__topic__mark}>&#x25B6;</span>
+              <p className={styles.presentation__list__body__topic__text}>
+                Mechanical Engineer (gratuated in 2017) at Facens - Faculdade de 
+                Engenharia de Sorocaba
+              </p>
+            </div>
+            <div className={styles.presentation__list__body__topic}>
+              <span className={styles.presentation__list__body__topic__mark}>&#x25B6;</span>
+              <p className={styles.presentation__list__body__topic__text}>
+                More than 350 hours of tech stydy at Alura. 
+                <a className={styles.presentation__list__body__topic__link} href='https://cursos.alura.com.br/user/cassiano-aalmeida/fullCertificate/1ce9e00a1922b736fe05dd3a28395841'>See here!</a>
+              </p>
+            </div>
+          </div>
+        </section>
         
-
-        <div className={styles.presentation__education}>
-          <h2 className={styles.presentation__education__title}>Education</h2>
-          <ul className={styles.presentation__education__list}>
-            <li className={styles.presentation__education__list__item}>
-                Mechanical Engineer (gratuated in 2017)
-            </li>
-            <li className={styles.presentation__education__list__item}>
-                More than 350 hours of tech stydy at Alura. <a className={styles.presentation__education__list__item__link} href='https://cursos.alura.com.br/user/cassiano-aalmeida/fullCertificate/1ce9e00a1922b736fe05dd3a28395841'>See here!</a>
-            </li>
-          </ul>
-        </div>
+        <section className={styles.presentation__languages}>
+          <div className={styles.presentation__detail}>
+            <span className={styles.presentation__detail__square}></span>
+            <span className={styles.presentation__detail__verticalLine}></span>
+          </div>
+          <div className={styles.presentation__list__body}>
+            <h2 className={styles.presentation__topics}>{'Languages'}</h2>
+            <div className={styles.presentation__list__body__topic}>
+              <span className={styles.presentation__list__body__topic__mark}>&#x25B6;</span>
+              <p className={styles.presentation__list__body__topic__text}>
+                Portuguese - Native
+              </p>
+            </div>
+            <div className={styles.presentation__list__body__topic}>
+              <span className={styles.presentation__list__body__topic__mark}>&#x25B6;</span>
+              <p className={styles.presentation__list__body__topic__text}>
+                English - Professional
+              </p>
+            </div>
+            <div className={styles.presentation__list__body__topic}>
+              <span className={styles.presentation__list__body__topic__mark}>&#x25B6;</span>
+              <p className={styles.presentation__list__body__topic__text}>
+                Spanish - Professional
+              </p>
+            </div>
+          </div>
+        </section>
       </div>
     </main>
   );

@@ -4,9 +4,17 @@ import styles from './Navbar.module.scss';
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [width, setWidth] = useState(window.innerWidth);
+  const breakpoint = 600;
+
+  const handleResizeWindow = () => setWidth(window.innerWidth);
+  window.addEventListener('resize', handleResizeWindow);
 
   const handleMenuClick = () => {
-    setIsMenuOpen(!isMenuOpen);
+    if(width < breakpoint) {
+      console.log('aqui');
+      setIsMenuOpen(!isMenuOpen);
+    }
   };
 
   const topics = [{
