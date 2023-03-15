@@ -1,6 +1,6 @@
 import styles from './Project.module.scss';
-import toGoIcon from 'assets/logos/to-go-icon.jpeg';
-import githubLogo from 'assets/logos/github-logo.png';
+import toGoIcon from 'assets/logos/to-go-icon.png';
+import githubLogo from 'assets/logos/github-white-logo.png';
 
 
 interface ProjectProps {
@@ -32,7 +32,7 @@ export default function Project({ project }: ProjectProps) {
         </div>
         <div className={styles.projects__project__body}>
           <h3 className={styles.projects__project__body__title}>{name}</h3>
-          <p className={styles.projects__project__body__description}>{`Description: ${details.description}`}</p>
+          <p className={styles.projects__project__body__description}>{details.description}</p>
           <h4 className={styles.projects__project__body__stackTitle}>Tech Stack in This Project</h4>
           <span className={styles.projects__project__body__stackList}>{details.techStack.join(' | ')}</span>
           <div className={styles.projects__project__body__links}>

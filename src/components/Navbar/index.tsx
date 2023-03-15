@@ -8,7 +8,10 @@ export default function Navbar() {
   const breakpoint = 600;
 
   const handleResizeWindow = () => setWidth(window.innerWidth);
+  const closeHamburguer = () => setIsMenuOpen(false);
   window.addEventListener('resize', handleResizeWindow);
+  window.addEventListener('resize', closeHamburguer);
+
 
   const handleMenuClick = () => {
     if(width < breakpoint) {
