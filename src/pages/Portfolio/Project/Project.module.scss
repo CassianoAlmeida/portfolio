@@ -15,6 +15,7 @@
         flex-wrap: wrap;
         justify-content: center;
         overflow: hidden;
+        position: relative;
 
         @include for-desktop-only {
             width: 80%;
@@ -25,6 +26,35 @@
             max-width: 100%;
             width: 100%;
             height: 100vw;
+
+            &__button {
+                position: absolute;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                align-items: center;
+                height: 100vw;
+                width: 100vw;
+                z-index: 2;
+                border: none;
+                font-family: $montserrat-style;
+                font-size: 30px;
+                padding:8%;
+                font-weight: bold;
+                opacity: 100%;
+                background-color: rgb(176, 155, 149);
+                border: solid 1px rgb(144, 128, 123);
+
+                &__img {
+                    transition: transform 0.5s ease-in-out;
+                }
+
+                &__imgFlipped {
+                    transform: rotate(180deg);
+                }
+
+            }
+
         }
 
         &__img {
@@ -39,7 +69,7 @@
             height: 100vw;
             max-height: 100vw;
             background-size: cover;
-            opacity: 0.7;
+            opacity: 0.6;
 
         }
 
@@ -52,11 +82,9 @@
             flex-direction: column;
             margin: 0 5%;
             transition: transform 0.5s ease-in-out;
-
-            &:active {
-                
-            }
-            
+            opacity: 0;
+            position: absolute;
+            z-index: 1;
 
             &__title {
                 margin: 25px 10px 25px 10px;
@@ -108,6 +136,11 @@
                     }
                 }
             }
+        }
+
+        &__bodyShow {
+            opacity: 100%;
+            position: relative;
         }
 
 

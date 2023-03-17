@@ -1,7 +1,9 @@
 import styles from './Project.module.scss';
 import toGoIcon from 'assets/logos/to-go-icon.png';
 import githubLogo from 'assets/logos/github-white-logo.png';
-
+import doubleDown from 'assets/icon/double-down.png';
+import classNames from 'classnames';
+import { useState } from 'react';
 
 interface ProjectProps {
     project: {
@@ -20,6 +22,11 @@ interface ProjectProps {
   
 export default function Project({ project }: ProjectProps) {
   const { id, name, link, image, details, github } = project;
+  const [toggledClass, setToggledClass] = useState(false);
+  const toggleClass = () => {
+    console.log(toggledClass);
+    setToggledClass(!toggledClass);
+  };
   const styleImage = {
     backgroundImage: `url(${image})`
   };
@@ -28,9 +35,22 @@ export default function Project({ project }: ProjectProps) {
     <div className={styles.projects}>
       <div className={styles.projects__project} key={id} id="project-item">
         <div className={styles.projects__project__figure}>
+          <button 
+            className={styles.projects__project__figure__button}
+            onClick={toggleClass}
+          >
+            {name}
+            <img className={classNames({
+              [styles.projects__project__figure__button__img]: true,
+              [styles.projects__project__figure__button__imgFlipped]: toggledClass
+            })} src={doubleDown} alt="down" />
+          </button>
           <span className={styles.projects__project__img} style={styleImage} key={id}/>
         </div>
-        <div className={styles.projects__project__body}>
+        <div className={classNames({
+          [styles.projects__project__body]: true,
+          [styles.projects__project__bodyShow]: toggledClass
+        })}>
           <h3 className={styles.projects__project__body__title}>{name}</h3>
           <p className={styles.projects__project__body__description}>{details.description}</p>
           <h4 className={styles.projects__project__body__stackTitle}>Tech Stack in This Project</h4>
