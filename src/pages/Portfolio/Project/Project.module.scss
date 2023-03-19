@@ -28,22 +28,23 @@
             height: 100vw;
 
             &__button {
+                padding:8%;
+                padding-top: 30vw;
                 position: absolute;
                 display: flex;
                 flex-direction: column;
-                justify-content: space-around;
+                justify-content: space-between;
                 align-items: center;
                 height: 100vw;
                 width: 100vw;
-                z-index: 2;
+                z-index: 3;
                 border: none;
                 font-family: $montserrat-style;
                 font-size: 30px;
-                padding:8%;
                 font-weight: bold;
                 opacity: 100%;
-                background-color: rgb(176, 155, 149);
-                border: solid 1px rgb(144, 128, 123);
+                background-color: rgb(62, 62, 62);
+                border: solid 1px rgb(27, 27, 26);
 
                 &__img {
                     transition: transform 0.5s ease-in-out;
@@ -55,9 +56,19 @@
 
             }
 
+            &__buttonHide {
+                transform: translateY(35vw);
+                z-index: 1;
+            }
+
+            &__titleHide {
+                opacity: 0;
+            }
+
         }
 
         &__img {
+            position: relative;
             display: block;
             transition: transform 0.5s ease-in-out;
             background-size: cover;
@@ -69,7 +80,7 @@
             height: 100vw;
             max-height: 100vw;
             background-size: cover;
-            opacity: 0.6;
+            z-index: 2;
 
         }
 
@@ -78,6 +89,7 @@
         }
         
         &__body {
+            transform: translateY(35vw);
             display: flex;
             flex-direction: column;
             margin: 0 5%;

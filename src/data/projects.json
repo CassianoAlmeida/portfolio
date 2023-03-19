@@ -1,6 +1,6 @@
 [  {    
     "id": 1,
-    "name": "My fist app - Mug shop",    
+    "name": "Mug shop webpage",    
     "link": "https://art-pieces.000webhostapp.com/",
     "github": "https://github.com/CassianoAlmeida/sa-arts",
     "image": "/projects-images/sa-arts.png",    
@@ -24,7 +24,7 @@
   },
   {
     "id": 3,
-    "name": "My First React App - To do list",
+    "name": "Simple to do list",
     "link": "http://first-react-app-to-do-list.vercel.app/",
     "github": "https://github.com/CassianoAlmeida/first-react-app-to-do-list",
     "image": "/projects-images/to-do-list.png",

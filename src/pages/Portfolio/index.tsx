@@ -19,7 +19,7 @@ interface PortfolioProps {
 export default function Portfolio({ projects }: PortfolioProps) {
   return (
     <main className={styles.portfolio}>
-      <div className={styles.portfolio__title}>Featured projects</div>
+      <div className={styles.portfolio__title}>FEATURED PROJECTS</div>
       <div className={styles.portfolio__projects}>
         {projects.map((project) => (
           <Project project={project} key={project.id} />

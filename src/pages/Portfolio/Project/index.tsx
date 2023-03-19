@@ -36,10 +36,15 @@ export default function Project({ project }: ProjectProps) {
       <div className={styles.projects__project} key={id} id="project-item">
         <div className={styles.projects__project__figure}>
           <button 
-            className={styles.projects__project__figure__button}
+            className={classNames({
+              [styles.projects__project__figure__button]: true,
+              [styles.projects__project__figure__buttonHide]: toggledClass
+            })}
             onClick={toggleClass}
           >
-            {name}
+            <p className={classNames({
+              [styles.projects__project__figure__titleHide]: toggledClass
+            })}>{name}</p>
             <img className={classNames({
               [styles.projects__project__figure__button__img]: true,
               [styles.projects__project__figure__button__imgFlipped]: toggledClass
