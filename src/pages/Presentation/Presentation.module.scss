@@ -23,17 +23,26 @@ main {
         text-align: left;
         color: white;
         font-family: $montserrat-style;
+
+        @include for-desktop-only {
+            font-size: 60px;
+        }
     }
 
     &__titleColor {
         color: $dark-hot-theme;
+        font-size: 40px;
+
+        @include for-desktop-only {
+            font-size: 100px;
+        }
     }
 
     &__topics {
         font-family: $montserrat-style;
         font-weight: bold;
         font-size: 20px;
-        color: white;
+        color: $dark-hot-theme;
         margin-bottom: 20px;
     }
 

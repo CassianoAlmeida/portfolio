@@ -51,6 +51,7 @@ export default function Project({ project }: ProjectProps) {
             })} src={doubleDown} alt="down" />
           </button>
           <span className={styles.projects__project__img} style={styleImage} key={id}/>
+          <img className={styles.projects__project__img} src={image} alt="" />
         </div>
         <div className={classNames({
           [styles.projects__project__body]: true,

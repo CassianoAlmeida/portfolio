@@ -9,7 +9,7 @@ export default function Presentation() {
           <h1 className={classNames({
             [styles.presentation__title]: true,
             [styles.presentation__titleColor]: true
-          })}>Hi there!</h1>
+          })}>{'HI THERE!'}</h1>
           <p className={styles.presentation__title}>{'I\'m Cassiano,'}</p>
           <p className={styles.presentation__title}>{'Web Developer'}</p>
         </section>

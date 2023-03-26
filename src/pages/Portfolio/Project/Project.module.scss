@@ -53,7 +53,13 @@
                 &__imgFlipped {
                     transform: rotate(180deg);
                 }
+            }
 
+            &__link {
+                display: block;
+                height: 100vw;
+                width: 100vw;
+                z-index: 3;
             }
 
             &__buttonHide {
