@@ -18,7 +18,8 @@
         position: relative;
 
         @include for-desktop-only {
-            width: 80%;
+            width: 30vw;
+            max-height: 30vw;
         }
 
         &__figure {
@@ -45,6 +46,12 @@
                 opacity: 100%;
                 background-color: rgb(62, 62, 62);
                 border: solid 1px rgb(27, 27, 26);
+
+                @include for-desktop-only {
+                    padding-top: 5vw;
+                    height: 30vw;
+                    width: 30vw;
+                }
 
                 &__img {
                     transition: transform 0.5s ease-in-out;
