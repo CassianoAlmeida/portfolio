@@ -58,7 +58,8 @@
                 }
 
                 &__imgFlipped {
-                    transform: rotate(180deg);
+                    transform: rotate(180deg) translate(-190%, -150%) scale(0.5);
+                    opacity: 100%;
                 }
             }
 
@@ -70,8 +71,8 @@
             }
 
             &__buttonHide {
-                transform: translateY(35vw);
-                z-index: 1;
+                z-index: 3;
+                opacity: 20%;
             }
 
             &__titleHide {
@@ -102,7 +103,6 @@
         }
         
         &__body {
-            transform: translateY(35vw);
             display: flex;
             flex-direction: column;
             margin: 0 5%;
