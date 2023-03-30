@@ -1,6 +1,6 @@
 [  {    
     "id": 1,
-    "name": "Mug shop webpage",    
+    "name": "Mug shop",    
     "link": "https://art-pieces.000webhostapp.com/",
     "github": "https://github.com/CassianoAlmeida/sa-arts",
     "image": "https://cassiano-portfolio.s3.sa-east-1.amazonaws.com/sa-arts.PNG",    
@@ -24,6 +24,30 @@
   },
   {
     "id": 3,
+    "name": "Simple to do list",
+    "link": "http://first-react-app-to-do-list.vercel.app/",
+    "github": "https://github.com/CassianoAlmeida/first-react-app-to-do-list",
+    "image": "https://cassiano-portfolio.s3.sa-east-1.amazonaws.com/to-do-list.PNG",
+    "details": {
+      "description": "A very simple and clean clean designed to-do-list, where you can crete a new task, cross it when it is done or delete.",
+      "techStack": ["React", "SASS"],
+      "status": ["Fully working"]
+    }
+  },
+  {
+    "id": 4,
+    "name": "Simple to do list",
+    "link": "http://first-react-app-to-do-list.vercel.app/",
+    "github": "https://github.com/CassianoAlmeida/first-react-app-to-do-list",
+    "image": "https://cassiano-portfolio.s3.sa-east-1.amazonaws.com/to-do-list.PNG",
+    "details": {
+      "description": "A very simple and clean clean designed to-do-list, where you can crete a new task, cross it when it is done or delete.",
+      "techStack": ["React", "SASS"],
+      "status": ["Fully working"]
+    }
+  },
+  {
+    "id": 5,
     "name": "Simple to do list",
     "link": "http://first-react-app-to-do-list.vercel.app/",
     "github": "https://github.com/CassianoAlmeida/first-react-app-to-do-list",
