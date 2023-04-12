@@ -24,7 +24,6 @@ export default function Project({ project }: ProjectProps) {
   const { id, name, link, image, details, github } = project;
   const [toggledClass, setToggledClass] = useState(false);
   const toggleClass = () => {
-    console.log(toggledClass);
     setToggledClass(!toggledClass);
   };
   const styleImage = {

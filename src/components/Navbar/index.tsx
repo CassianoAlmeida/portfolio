@@ -19,7 +19,6 @@ export default function Navbar() {
 
   const handleMenuClick = () => {
     if(width < breakpoint) {
-      console.log('aqui');
       setIsMenuOpen(!isMenuOpen);
     }
   };

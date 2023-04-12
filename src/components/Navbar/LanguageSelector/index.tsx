@@ -4,7 +4,6 @@ import styles from './LanguageSelector.module.scss';
 
 export default function LanguageSelector() {
   const { i18n } = useTranslation();
-  console.log(i18n.language);
 
   const languages = [
     { code: 'EN', label: 'English' },
@@ -23,7 +22,6 @@ export default function LanguageSelector() {
     setSelectedLanguage(code);
     setShowLanguageOptions(false);
     i18n.changeLanguage(code);
-    console.log(i18n.language);
   };
 
   return (

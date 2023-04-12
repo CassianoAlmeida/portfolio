@@ -1,0 +1,36 @@
+[{
+    "id": 1,
+    "name": "Loja de Canecas",
+    "link": "https://art-pieces.000webhostapp.com/",
+    "github": "https://github.com/CassianoAlmeida/sa-arts",
+    "image": "https://cassiano-portfolio.s3.sa-east-1.amazonaws.com/sa-arts.PNG",
+    "details": {
+    "description": "Página web simples que representa um mercado. Os produtos exibidos são estáticos. A principal característica é o modo responsivo bem projetado.",
+    "techStack": ["HTML", "SASS", "Javascript", "Bootstrap"],
+    "status": ["Totalmente funcional"]
+    }
+    },
+    {
+    "id": 2,
+    "name": "Alura Geek",
+    "link": "https://alura-geek3.000webhostapp.com/",
+    "github": "https://github.com/CassianoAlmeida/AluraChallenge-FrontEnd",
+    "image": "https://cassiano-portfolio.s3.sa-east-1.amazonaws.com/alura-geek.PNG",
+    "details": {
+    "description": "Mercado REST API, com uma interface simples para o vendedor adicionar produtos. Acesso para login falso. email = 'fakelogin@alurageek.com.br'; senha = 'AluraGeek!@#'",
+    "techStack": ["HTML", "SASS", "Javascript", "Node.js", "MongoDB", "AWS S3"],
+    "status": ["Funcionando, mas com instabilidade"]
+    }
+    },
+    {
+    "id": 3,
+    "name": "Lista de Tarefas Simples",
+    "link": "http://first-react-app-to-do-list.vercel.app/",
+    "github": "https://github.com/CassianoAlmeida/first-react-app-to-do-list",
+    "image": "https://cassiano-portfolio.s3.sa-east-1.amazonaws.com/to-do-list.PNG",
+    "details": {
+    "description": "Uma lista de tarefas muito simples e limpa, onde você pode criar uma nova tarefa, riscá-la quando concluída ou excluí-la.",
+    "techStack": ["React", "SASS"],
+    "status": ["Totalmente funcional"]
+    }
+    }]
