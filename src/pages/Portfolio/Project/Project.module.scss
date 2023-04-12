@@ -33,6 +33,12 @@
                 max-height: 30vw;
             }
 
+            &__title {
+                @include for-desktop-only {
+                    display: none;
+                }
+            }
+
             &__button {
                 padding:8%;
                 padding-top: 30vw;
@@ -54,8 +60,9 @@
 
                 &:hover {
                     @include for-desktop-only {
-                        opacity: 0;
+                        opacity: 70%;
                     }
+
                 }
 
                 &:hover .projects__project__body {
@@ -76,6 +83,10 @@
 
                 &__img {
                     transition: transform 0.5s ease-in-out;
+
+                    @include for-desktop-only {
+                        display: none;
+                    }
                 }
 
                 &__imgFlipped {
@@ -133,8 +144,17 @@
             margin: 0 5%;
             transition: transform 0.5s ease-in-out;
             opacity: 0;
-            position: absolute;
             z-index: 1;
+
+            @include for-phone-only {
+                position: absolute;
+            }
+
+            @include for-desktop-only {
+                transform: translateY(-120%);
+                opacity: 100%;
+                z-index: 3;
+            }
 
             &__title {
                 margin: 25px 10px 25px 10px;

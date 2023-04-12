@@ -43,6 +43,7 @@ export default function Project({ project }: ProjectProps) {
             onClick={toggleClass}
           >
             <p className={classNames({
+              [styles.projects__project__figure__title]: true,
               [styles.projects__project__figure__titleHide]: toggledClass
             })}>{name}</p>
             <img className={classNames({

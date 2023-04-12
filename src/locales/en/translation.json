@@ -1,0 +1,91 @@
+{
+    "navbar": {
+        "logo": "CA",
+        "topics": [
+            {
+                "about": "About me"
+            },
+            {
+                "portfolio": "Portfolio"
+            },
+            {
+                "contact": "Contact me"
+            }
+        ]
+    }, 
+
+    "presentation": {
+      "hiThere": "HI THERE!",
+      "name": "I'm Cassiano,",
+      "jobTitle": "Web Developer",
+      "myStory": "My story",
+      "education": "Education",
+      "languages": "Languages",
+      "mechanicalEng": "Mechanical Engineer (graduated in 2017) at Facens - Faculdade de Engenharia de Sorocaba",
+      "aluraStudy": "More than 350 hours of tech study at Alura.",
+      "aluraCertificate": "See here!",
+      "portuguese": "Portuguese - Native",
+      "english": "English - Professional",
+      "spanish": "Spanish - Professional",
+      "storyText": "Graduated as a mechanical engineer, I had a brief contact with programming during college, and that is how an interest and affinity arose. I am working on my career transition to front-end development, studying, developing and practicing on personal projects. At the moment, I am focusing on building applications with React and Typescript, but I am always interested in adding new technologies to my repertoire."
+    },
+
+    "portfolio": {
+        "title": "FEATURED PROJECTS",
+        "projects": [
+        {
+        "id": 1,
+        "name": "Mug shop",
+        "link": "https://art-pieces.000webhostapp.com/",
+        "github": "https://github.com/CassianoAlmeida/sa-arts",
+        "image": "https://cassiano-portfolio.s3.sa-east-1.amazonaws.com/sa-arts.PNG",
+        "details": {
+        "description": "Simple web page that represents a marketplace. The products shown are static. The main feature is the good looking responsive mode.",
+        "techStack": ["HTML", "SASS", "Javascript", "Bootstrap"],
+        "status": ["Fully working"]
+        }
+        },
+        {
+        "id": 2,
+        "name": "Alura Geek",
+        "link": "https://alura-geek3.000webhostapp.com/",
+        "github": "https://github.com/CassianoAlmeida/AluraChallenge-FrontEnd",
+        "image": "https://cassiano-portfolio.s3.sa-east-1.amazonaws.com/alura-geek.PNG",
+        "details": {
+        "description": "REST API Marketplace, with a simple interface for the seller to add products. Access for fake login. email = 'fakelogin@alurageek.com.br'; senha = 'AluraGeek!@#'",
+        "techStack": ["HTML", "SASS", "Javascript", "Node.js", "MongoDB", "AWS S3"],
+        "status": ["Working facing instability"]
+        }
+        },
+        {
+        "id": 3,
+        "name": "Simple to do list",
+        "link": "http://first-react-app-to-do-list.vercel.app/",
+        "github": "https://github.com/CassianoAlmeida/first-react-app-to-do-list",
+        "image": "https://cassiano-portfolio.s3.sa-east-1.amazonaws.com/to-do-list.PNG",
+        "details": {
+        "description": "A very simple and clean clean designed to-do-list, where you can crete a new task, cross it when it is done or delete.",
+        "techStack": ["React", "SASS"],
+        "status": ["Fully working"]
+        }
+        }
+    ]},
+
+    "contact": {
+      "title": "Get in touch!",
+      "phrase": "Questions? Suggestions? Constructive criticism? Let's talk :)",
+      "nameLabel": "Name:",
+      "emailLabel": "Email:",
+      "messageLabel": "Message:",
+      "namePlaceholder": "name",
+      "emailPlaceholder": "email",
+      "messagePlaceholder": "message",
+      "buttonText": "send"
+    },
+
+    "footer": {
+        "text": "Develped by Cassiano - 2023"
+    }
+  }
+  
+  

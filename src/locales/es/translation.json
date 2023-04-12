@@ -1,0 +1,90 @@
+{
+    "navbar": {
+        "logo": "CA",
+        "topics": [
+            {
+                "about": "Acerca de mi"
+            },
+            {
+                "portfolio": "Proyectos"
+            },
+            {
+                "contact": "Contacto"
+            }
+        ]
+    },
+    
+    "presentation": {
+      "hiThere": "¡HOLA!",
+      "name": "Soy Cassiano,",
+      "jobTitle": "Desarrollador Web",
+      "myStory": "Mi historia",
+      "education": "Educación",
+      "languages": "Idiomas",
+      "mechanicalEng": "Ingeniero mecánico graduado en 2017 en Facens - Faculdade de Engenharia de Sorocaba",
+      "aluraStudy": "Más de 350 horas de estudio de tecnología en Alura.",
+      "aluraCertificate": "¡Mira aquí!",
+      "portuguese": "Portugués - Nativo",
+      "english": "Inglés - Profesional",
+      "spanish": "Español - Profesional",
+      "storyText": "Graduado como ingeniero mecánico, tuve un breve contacto con la programación durante"
+    },
+
+    "portfolio": {
+        "title": "PROYECTOS DESTACADOS",
+        "projects": [ {
+            "id": 1,
+            "name": "Tienda de tazas",
+            "link": "https://art-pieces.000webhostapp.com/",
+            "github": "https://github.com/CassianoAlmeida/sa-arts",
+            "image": "https://cassiano-portfolio.s3.sa-east-1.amazonaws.com/sa-arts.PNG",
+            "details": {
+            "description": "Página web sencilla que representa un mercado. Los productos mostrados son estáticos. La característica principal es el modo de respuesta bien diseñado.",
+            "techStack": ["HTML", "SASS", "Javascript", "Bootstrap"],
+            "status": ["Completamente funcional"]
+            }
+            },
+            {
+            "id": 2,
+            "name": "Alura Geek",
+            "link": "https://alura-geek3.000webhostapp.com/",
+            "github": "https://github.com/CassianoAlmeida/AluraChallenge-FrontEnd",
+            "image": "https://cassiano-portfolio.s3.sa-east-1.amazonaws.com/alura-geek.PNG",
+            "details": {
+            "description": "Mercado REST API, con una interfaz sencilla para que el vendedor añada productos. Acceso para inicio de sesión falso. email = 'fakelogin@alurageek.com.br'; senha = 'AluraGeek!@#'",
+            "techStack": ["HTML", "SASS", "Javascript", "Node.js", "MongoDB", "AWS S3"],
+            "status": ["Funciona pero presenta inestabilidad"]
+            }
+            },
+            {
+            "id": 3,
+            "name": "Lista de tareas simple",
+            "link": "http://first-react-app-to-do-list.vercel.app/",
+            "github": "https://github.com/CassianoAlmeida/first-react-app-to-do-list",
+            "image": "https://cassiano-portfolio.s3.sa-east-1.amazonaws.com/to-do-list.PNG",
+            "details": {
+            "description": "Una lista de tareas muy simple y limpia, donde puedes crear una nueva tarea, tacharla cuando esté hecha o eliminarla.",
+            "techStack": ["React", "SASS"],
+            "status": ["Completamente funcional"]
+            }
+            }
+        ]
+    },
+
+    "contact": {
+        "title": "¡Ponte en contacto!",
+        "phrase": "¿Preguntas? ¿Sugerencias? ¿Críticas constructivas? ¡Hablemos! :)",
+        "nameLabel": "Nombre:",
+        "emailLabel": "Correo electrónico:",
+        "messageLabel": "Mensaje:",
+        "namePlaceholder": "nombre",
+        "emailPlaceholder": "correo electrónico",
+        "messagePlaceholder": "mensaje",
+        "buttonText": "enviar"
+      },
+
+    "footer": {
+        "text": "Desarrollado por Cassiano - 2023"
+    }
+      
+}

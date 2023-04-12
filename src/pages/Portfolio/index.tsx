@@ -1,5 +1,6 @@
 import Project from './Project';
 import styles from './Portfolio.module.scss';
+import { useTranslation } from 'react-i18next';
 
 interface PortfolioProps {
     projects: Array<{
@@ -17,9 +18,11 @@ interface PortfolioProps {
   }
   
 export default function Portfolio({ projects }: PortfolioProps) {
+  const { t } = useTranslation();
+
   return (
     <main className={styles.portfolio}>
-      <div className={styles.portfolio__title}>FEATURED PROJECTS</div>
+      <div className={styles.portfolio__title}>{t('portfolio.title')}</div>
       <div className={styles.portfolio__projects}>
         {projects.map((project) => (
           <Project project={project} key={project.id} />

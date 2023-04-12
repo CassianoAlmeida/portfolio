@@ -1,7 +1,10 @@
 import styles from './Presentation.module.scss';
 import classNames from 'classnames';
+import { useTranslation } from 'react-i18next';
 
 export default function Presentation() {
+  const { t } = useTranslation();
+
   return(
     <main>
       <div className={styles.presentation}>
@@ -9,9 +12,9 @@ export default function Presentation() {
           <h1 className={classNames({
             [styles.presentation__title]: true,
             [styles.presentation__titleColor]: true
-          })}>{'HI THERE!'}</h1>
-          <p className={styles.presentation__title}>{'I\'m Cassiano,'}</p>
-          <p className={styles.presentation__title}>{'Web Developer'}</p>
+          })}>{t('presentation.hiThere')}</h1>
+          <p className={styles.presentation__title}>{t('presentation.name')}</p>
+          <p className={styles.presentation__title}>{t('presentation.jobTitle')}</p>
         </section>
         <section className={styles.presentation__story}>
           <div className={styles.presentation__detail}>
@@ -19,11 +22,8 @@ export default function Presentation() {
             <span className={styles.presentation__detail__verticalLine}></span>
           </div>
           <div className={styles.presentation__story__body}>
-            <h2 className={styles.presentation__topics}>{'My story'}</h2>
-            <p className={styles.presentation__story__body__text}>Graduated as mechanical engineer, I had a brief contact with programming during college, 
-            and that is how an interest and affinity arose. I am working on my career transition to front-end development, 
-            studying, developing and practicing on personal projects. At the moment, I am focusing on building applications with React and Typescript, 
-            but I am always interested in adding new technologies to my repertoire.</p>
+            <h2 className={styles.presentation__topics}>{t('presentation.myStory')}</h2>
+            <p className={styles.presentation__story__body__text}>{t('presentation.storyText')}</p>
           </div>
         </section>
 
@@ -33,19 +33,18 @@ export default function Presentation() {
             <span className={styles.presentation__detail__verticalLine}></span>
           </div>
           <div className={styles.presentation__list__body}>
-            <h2 className={styles.presentation__topics}>{'Education'}</h2>
+            <h2 className={styles.presentation__topics}>{t('presentation.education')}</h2>
             <div className={styles.presentation__list__body__topic}>
               <span className={styles.presentation__list__body__topic__mark}>&#x25B6;</span>
               <p className={styles.presentation__list__body__topic__text}>
-                Mechanical Engineer (gratuated in 2017) at Facens - Faculdade de 
-                Engenharia de Sorocaba
+                {t('presentation.mechanicalEng')}
               </p>
             </div>
             <div className={styles.presentation__list__body__topic}>
               <span className={styles.presentation__list__body__topic__mark}>&#x25B6;</span>
               <p className={styles.presentation__list__body__topic__text}>
-                More than 350 hours of tech stydy at Alura. 
-                <a className={styles.presentation__list__body__topic__link} href='https://cursos.alura.com.br/user/cassiano-aalmeida/fullCertificate/1ce9e00a1922b736fe05dd3a28395841'>See here!</a>
+                {t('presentation.aluraStudy')} 
+                <a className={styles.presentation__list__body__topic__link} href='https://cursos.alura.com.br/user/cassiano-aalmeida/fullCertificate/1ce9e00a1922b736fe05dd3a28395841'>{t('presentation.aluraCertificate')}</a>
               </p>
             </div>
           </div>
@@ -57,23 +56,23 @@ export default function Presentation() {
             <span className={styles.presentation__detail__verticalLine}></span>
           </div>
           <div className={styles.presentation__list__body}>
-            <h2 className={styles.presentation__topics}>{'Languages'}</h2>
+            <h2 className={styles.presentation__topics}>{t('presentation.languages')}</h2>
             <div className={styles.presentation__list__body__topic}>
               <span className={styles.presentation__list__body__topic__mark}>&#x25B6;</span>
               <p className={styles.presentation__list__body__topic__text}>
-                Portuguese - Native
+                {t('presentation.portuguese')}
               </p>
             </div>
             <div className={styles.presentation__list__body__topic}>
               <span className={styles.presentation__list__body__topic__mark}>&#x25B6;</span>
               <p className={styles.presentation__list__body__topic__text}>
-                English - Professional
+                {t('presentation.english')}
               </p>
             </div>
             <div className={styles.presentation__list__body__topic}>
               <span className={styles.presentation__list__body__topic__mark}>&#x25B6;</span>
               <p className={styles.presentation__list__body__topic__text}>
-                Spanish - Professional
+                {t('presentation.spanish')}
               </p>
             </div>
           </div>
