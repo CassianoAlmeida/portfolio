@@ -13,7 +13,7 @@ import ContactMe from 'pages/ContactMe.jsx';
 
 
 export default function AppRouter() {
-  const { t, i18n } = useTranslation();
+  const { i18n } = useTranslation();
 
   let projects = [];
   
