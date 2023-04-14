@@ -31,7 +31,10 @@
     },
 
     "portfolio": {
-        "title": "FEATURED PROJECTS"
+        "title": "FEATURED PROJECTS",
+        "stack": "Tech Stack in This Project",
+        "repository": "See my repo!",
+        "goto": "Check it out!"
     },
 
     "contact": {

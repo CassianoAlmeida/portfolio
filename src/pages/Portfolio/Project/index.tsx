@@ -4,6 +4,7 @@ import githubLogo from 'assets/logos/github-white-logo.png';
 import doubleDown from 'assets/icon/double-down.png';
 import classNames from 'classnames';
 import { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 
 interface ProjectProps {
     project: {
@@ -21,11 +22,25 @@ interface ProjectProps {
   }
   
 export default function Project({ project }: ProjectProps) {
+  const { t } = useTranslation();
+
   const { id, name, link, image, details, github } = project;
   const [toggledClass, setToggledClass] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
   const toggleClass = () => {
     setToggledClass(!toggledClass);
   };
+
+  const handleModalToggle = () => {
+    setIsModalOpen(!isModalOpen);
+  };
+
+  const handleButtonClick = () => {
+    toggleClass();
+    handleModalToggle();
+  };
+
   const styleImage = {
     backgroundImage: `url(${image})`
   };
@@ -34,12 +49,13 @@ export default function Project({ project }: ProjectProps) {
     <div className={styles.projects}>
       <div className={styles.projects__project} key={id} id="project-item">
         <div className={styles.projects__project__figure}>
+          <span className={styles.projects__project__figure__desktopCover}></span>
           <button 
             className={classNames({
               [styles.projects__project__figure__button]: true,
               [styles.projects__project__figure__buttonHide]: toggledClass
             })}
-            onClick={toggleClass}
+            onClick={handleButtonClick}
           >
             <p className={classNames({
               [styles.projects__project__figure__title]: true,
@@ -47,7 +63,8 @@ export default function Project({ project }: ProjectProps) {
             })}>{name}</p>
             <img className={classNames({
               [styles.projects__project__figure__button__img]: true,
-              [styles.projects__project__figure__button__imgFlipped]: toggledClass
+              [styles.projects__project__figure__button__imgFlipped]: toggledClass,
+              [styles.projects__project__bodyModal]: isModalOpen
             })} src={doubleDown} alt="down" />
           </button>
           <span className={styles.projects__project__img} style={styleImage} key={id}/>
@@ -55,11 +72,17 @@ export default function Project({ project }: ProjectProps) {
         </div>
         <div className={classNames({
           [styles.projects__project__body]: true,
-          [styles.projects__project__bodyShow]: toggledClass
+          [styles.projects__project__bodyShow]: toggledClass,
+          [styles.projects__project__bodyModal]: isModalOpen
         })}>
+          {isModalOpen && (
+            <button className={styles.projects__project__body__close} onClick={toggleClass}>
+              <span className={styles.projects__project__body__closeIcon}>x</span>
+            </button>
+          )}
           <h3 className={styles.projects__project__body__title}>{name}</h3>
           <p className={styles.projects__project__body__description}>{details.description}</p>
-          <h4 className={styles.projects__project__body__stackTitle}>Tech Stack in This Project</h4>
+          <h4 className={styles.projects__project__body__stackTitle}>{t('portfolio.stack')}</h4>
           <span className={styles.projects__project__body__stackList}>{details.techStack.join(' | ')}</span>
           <div className={styles.projects__project__body__links}>
             <a 
@@ -67,14 +90,14 @@ export default function Project({ project }: ProjectProps) {
               href={github}
             >
               <img className={styles.projects__project__body__links__link__img} src={githubLogo} alt="github" />
-              <p className={styles.projects__project__body__links__link__text}>See my repo!</p>
+              <p className={styles.projects__project__body__links__link__text}>{t('portfolio.repository')}</p>
             </a>
             <a 
               className={styles.projects__project__body__links__link}
               href={link}
             >
               <img className={styles.projects__project__body__links__link__img} src={toGoIcon} alt="see the app" />
-              <p className={styles.projects__project__body__links__link__text}>Check it out!</p>
+              <p className={styles.projects__project__body__links__link__text}>{t('portfolio.goto')}</p>
             </a>
           </div>
         </div>
