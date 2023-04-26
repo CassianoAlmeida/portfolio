@@ -49,7 +49,9 @@ export default function Project({ project }: ProjectProps) {
     <div className={styles.projects}>
       <div className={styles.projects__project} key={id} id="project-item">
         <div className={styles.projects__project__figure}>
-          <span className={styles.projects__project__figure__desktopCover}></span>
+          <div className={styles.projects__project__figure__desktopCover}>
+            <div className={styles.projects__project__figure__desktopCover__name}>{name}</div>
+          </div>
           <button 
             className={classNames({
               [styles.projects__project__figure__button]: true,
@@ -66,6 +68,7 @@ export default function Project({ project }: ProjectProps) {
               [styles.projects__project__figure__button__imgFlipped]: toggledClass,
               [styles.projects__project__bodyModal]: isModalOpen
             })} src={doubleDown} alt="down" />
+            <p className={styles.projects__project__figure__button__text}>{t('portfolio.button')}</p>
           </button>
           <span className={styles.projects__project__img} style={styleImage} key={id}/>
           <img className={styles.projects__project__img} src={image} alt="" />
@@ -75,11 +78,9 @@ export default function Project({ project }: ProjectProps) {
           [styles.projects__project__bodyShow]: toggledClass,
           [styles.projects__project__bodyModal]: isModalOpen
         })}>
-          {isModalOpen && (
-            <button className={styles.projects__project__body__close} onClick={toggleClass}>
-              <span className={styles.projects__project__body__closeIcon}>x</span>
-            </button>
-          )}
+          <button className={styles.projects__project__body__close} onClick={handleModalToggle}>
+            <span className={styles.projects__project__body__closeIcon}>x</span>
+          </button>
           <h3 className={styles.projects__project__body__title}>{name}</h3>
           <p className={styles.projects__project__body__description}>{details.description}</p>
           <h4 className={styles.projects__project__body__stackTitle}>{t('portfolio.stack')}</h4>

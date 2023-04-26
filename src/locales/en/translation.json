@@ -32,6 +32,7 @@
 
     "portfolio": {
         "title": "FEATURED PROJECTS",
+        "button": "Check it out!",
         "stack": "Tech Stack in This Project",
         "repository": "See my repo!",
         "goto": "Check it out!"

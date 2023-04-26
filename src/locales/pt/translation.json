@@ -32,7 +32,11 @@
     },
 
     "portfolio": {
-        "title": "PROJETOS EM DESTAQUE"
+        "title": "PROJETOS EM DESTAQUE",
+        "button": "Saiba mais!",
+        "stack": "Tech Stack neste projeto",
+        "repository": "Veja meu repô!",
+        "goto": "Confira!"
     },
 
     "contact": {

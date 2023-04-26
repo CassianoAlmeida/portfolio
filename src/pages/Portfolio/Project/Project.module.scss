@@ -22,22 +22,35 @@
             max-height: 30vw;
         }
 
+        @include for-tablet-only {
+            width: 45vw;
+            max-height: 45vw;
+        }
+
         &__figure {
             overflow: hidden;
             max-width: 100%;
             width: 100%;
             height: 100vw;
 
-            @include for-desktop-only {
-                width: 30vw;
-                max-height: 30vw;
+            @include for-tablet-and-desktop {
                 display: flex;
                 justify-content: center;
                 align-items: center;
             }
 
+            @include for-desktop-only {
+                width: 30vw;
+                max-height: 30vw;
+            }
+
+            @include for-tablet-only {
+                width: 45vw;
+                max-height: 45vw;
+            }
+
             &__title {
-                @include for-desktop-only {
+                @include for-tablet-and-desktop {
                     display: none;
                 }
             }
@@ -45,14 +58,44 @@
             &__desktopCover {
                 display: none;
 
-                @include for-desktop-only {
+                @include for-tablet-and-desktop {
                     position: absolute;
                     display: block;
-                    height: 30vw;
-                    width: 30vw;
                     z-index: 3;
-                    background-color: rgb(62, 62, 62);
-                    border: solid 1px rgb(27, 27, 26);
+                    background-color: $cover-color;
+                    border: 1px solid $dark-background;
+                }
+
+                @include for-desktop-only {
+                    height: $desktopCover-dimension-desktop;
+                    width: $desktopCover-dimension-desktop;
+                }
+
+                @include for-tablet-only {
+                    height: $desktopCover-dimension-tablet;
+                    width: $desktopCover-dimension-tablet;
+                }
+
+                &__name {
+                    display: none;
+
+                    @include for-tablet-and-desktop {
+                        display: flex;
+                        justify-content: center;
+                        height: 65%;
+                        align-items: center;
+                        font-size: 30px;
+                        font-weight: bold; 
+                        font-family: $montserrat-style;
+                    }
+
+                    @include for-desktop-only {
+                        font-size: 50px;
+                    }
+
+                    @include for-desktop-only {
+                        font-size: 40px;
+                    }
                 }
             }
 
@@ -72,19 +115,11 @@
                 font-size: 30px;
                 font-weight: bold;
                 opacity: 100%;
-                background-color: rgb(62, 62, 62);
+                background-color: $cover-color;
                 border: solid 1px rgb(27, 27, 26);
-
-                &:hover {
-                    @include for-desktop-only {
-                        opacity: 70%;
-                    }
-
-                }
 
                 &:hover .projects__project__body {
                     @include for-desktop-only {
-                        background-color: red;
                         display: block;
                         transform: translateX(300px);
                         z-index: 3;
@@ -92,18 +127,39 @@
                     }
                 }
 
+                @include for-tablet-and-desktop {
+                    background-color: $cover-color;
+                    padding: 0;
+                    border: 1px solid $dark-hot-theme;
+                    
+
+                    &:hover .projects__project__figure__button__text {
+                        color: white;
+                        font-size: 23px;
+                    }
+
+                    &:hover {
+                        background-color: $dark-hot-theme;
+                    }
+
+                }
+
                 @include for-desktop-only {
-                    background-color: $ligth-hot-theme;
-                    padding-top: 5vw;
-                    height: 50%;
-                    width: 50%;
-                    border-radius: 50%;
+                    height: 60px;
+                    width: 250px;
+                    transform: translateY(60px);
+                }
+
+                @include for-tablet-only {
+                    height: 60px;
+                    width: 70%;
+                    transform: translateY(60px);
                 }
 
                 &__img {
                     transition: transform 0.5s ease-in-out;
 
-                    @include for-desktop-only {
+                    @include for-tablet-and-desktop {
                         display: none;
                     }
                 }
@@ -112,8 +168,20 @@
                     transform: rotate(180deg) translate(-190%, -33vw) scale(0.5);
                     opacity: 100%;
 
-                    @include for-desktop-only {
+                    @include for-tablet-and-desktop {
                         display: none;
+                    }
+                }
+
+                &__text {
+                    display: none;
+
+                    @include for-tablet-and-desktop {
+                        display: block;
+                        color: $dark-hot-theme;
+                        font-size: 20px;
+                        font-family: $sono-style;
+                        transition: all 0.3s ease-in-out;
                     }
                 }
             }
@@ -128,6 +196,10 @@
             &__buttonHide {
                 z-index: 3;
                 opacity: 20%;
+
+                @include for-tablet-and-desktop {
+                    opacity: 100%;
+                }
             }
 
             &__titleHide {
@@ -169,15 +241,32 @@
                 position: absolute;
             }
 
-            @include for-desktop-only {
+            @include for-tablet-and-desktop {
+                position: absolute;
                 transform: translateY(-120%);
             }
 
             &__close {
                 display: none;
 
-                @include for-desktop-only {
-                    display: block;
+                @include for-tablet-and-desktop {
+                    display: flex;
+                    background-color: $darker-background;
+                    border: none;
+                    justify-content: end;
+                    width: 30px;
+                    margin-right: 0;
+                    margin-left: 85%;
+                }
+            }
+
+            &__closeIcon {
+                @include for-tablet-and-desktop {
+                    color: white;
+                    font-size: 25px;
+                    font-family: $montserrat-style;
+                    margin-right: 5%;
+                    
                 }
             }
 
@@ -215,10 +304,10 @@
                     text-decoration: none;
                     display: flex;
                     align-items: center;
-                    justify-content: center;
+                    justify-content: space-between;
                     margin: 0 5px;
                     height: 40px;
-                    width: 100%;
+                    width: 170px;
         
                     &__img {
                         width: 30px;
@@ -234,27 +323,39 @@
         }
 
         &__bodyShow {
-            opacity: 100%;
-            position: relative;
+            @include for-phone-only {
+                opacity: 100%;
+                position: relative;
+            }
 
-            @include for-desktop-only {
+            @include for-tablet-and-desktop {
                 display: block;
             }
         }
 
         &__bodyModal {
-            @include for-desktop-only {
+            @include for-tablet-and-desktop {
                 position: fixed;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);
                 z-index: 4;
                 border: solid 1px rgb(27, 27, 26);
-                padding: 1rem;
-                width: 30%;
-                height: 60%;
+                padding: 2rem;
                 overflow-y: auto;
                 background-color: $darker-background;
+                opacity: 100%;
+            }
+
+            @include for-desktop-only {
+                top: 100%;
+                left: 30%;
+                width: 30%;
+                height: 65%;
+            }
+
+            @include for-tablet-only {
+                top: 100%;
+                left: 12%;
+                width: 60%;
+                height: 65%;
             }
         }
 

@@ -4,12 +4,13 @@
 $dark-background: hsl(0, 0%, 12%);
 $lighter-background: hsl(0, 0%, 21%);
 $darker-background: #0a0a0b;
+$cover-color: rgb(62, 62, 62);
 $grey: #585858;
 $ligther-grey: #dfdfdf;
 $dark-cold-theme: #0081A7;
-$ligth-cold-theme: #00AFB9;
 $ligth-hot-theme: #FED9B7;
 $dark-hot-theme: #f38780;
-$card-height: 520px;
+$desktopCover-dimension-desktop: calc(30vw - 2px);
+$desktopCover-dimension-tablet: calc(45vw - 2px);
 $montserrat-style: 'Montserrat', sans-serif;
 $sono-style: 'Sono', sans-serif;

@@ -24,7 +24,7 @@
     },
     {
     "id": 3,
-    "name": "Lista de Tarefas Simples",
+    "name": "Lista de Tarefas",
     "link": "http://first-react-app-to-do-list.vercel.app/",
     "github": "https://github.com/CassianoAlmeida/first-react-app-to-do-list",
     "image": "https://cassiano-portfolio.s3.sa-east-1.amazonaws.com/to-do-list.PNG",

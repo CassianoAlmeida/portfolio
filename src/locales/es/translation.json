@@ -31,7 +31,12 @@
     },
 
     "portfolio": {
-        "title": "PROYECTOS DESTACADOS"
+        "title": "PROYECTOS DESTACADOS",
+        "button": "Échale un vistazo!",
+        "stack": "Tech Stack en este proyecto",
+        "repository": "Ve mi repo!",
+        "goto": "Échale un vistazo!"
+
     },
 
     "contact": {

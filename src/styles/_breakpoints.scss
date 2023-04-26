@@ -9,3 +9,7 @@
 @mixin for-desktop-only {
     @media (min-width: 1100px) { @content; }
 }
+
+@mixin for-tablet-and-desktop {
+    @media (min-width: 500px) { @content; }
+}
