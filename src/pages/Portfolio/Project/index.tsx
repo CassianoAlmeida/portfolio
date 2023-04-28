@@ -73,6 +73,8 @@ export default function Project({ project }: ProjectProps) {
           <span className={styles.projects__project__img} style={styleImage} key={id}/>
           <img className={styles.projects__project__img} src={image} alt="" />
         </div>
+
+        
         <div className={classNames({
           [styles.projects__project__body]: true,
           [styles.projects__project__bodyShow]: toggledClass,
@@ -103,6 +105,12 @@ export default function Project({ project }: ProjectProps) {
           </div>
         </div>
       </div>
+      <button className={classNames({
+        [styles.modalBackground]: true,
+        [styles.modalBackground__show]: isModalOpen
+      })}
+      onClick={handleModalToggle}
+      ></button>
     </div>
   );
 }
